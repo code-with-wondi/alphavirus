@@ -391,14 +391,14 @@ body {
   background-color: var(--filter-reset);
 }
 
-.products-area-wrapper {
+.bets-area-wrapper {
   width: 100%;
   max-height: 100%;
   overflow: auto;
   padding: 0 4px;
 }
 
-.tableView .products-header {
+.tableView .bets-header {
   display: flex;
   align-items: center;
   border-radius: 4px;
@@ -406,16 +406,16 @@ body {
   position: sticky;
   top: 0;
 }
-.tableView .products-row {
+.tableView .bets-row {
   display: flex;
   align-items: center;
   border-radius: 4px;
 }
-.tableView .products-row:hover {
+.tableView .bets-row:hover {
   box-shadow: var(--filter-shadow);
   background-color: var(--app-content-secondary-color);
 }
-.tableView .products-row .cell-more-button {
+.tableView .bets-row .cell-more-button {
   display: none;
 }
 .tableView .product-cell {
@@ -521,10 +521,10 @@ body {
     margin: 0;
   }
 }
-.gridView .products-header {
+.gridView .bets-header {
   display: none;
 }
-.gridView .products-row {
+.gridView .bets-row {
   margin: 8px;
   width: calc(25% - 16px);
   background-color: var(--app-content-secondary-color);
@@ -534,33 +534,33 @@ body {
   transition: transform 0.2s;
   position: relative;
 }
-.gridView .products-row:hover {
+.gridView .bets-row:hover {
   transform: scale(1.01);
   box-shadow: var(--filter-shadow);
 }
-.gridView .products-row:hover .cell-more-button {
+.gridView .bets-row:hover .cell-more-button {
   display: flex;
 }
 @media screen and (max-width: 1024px) {
-  .gridView .products-row {
+  .gridView .bets-row {
     width: calc(33.3% - 16px);
   }
 }
 @media screen and (max-width: 820px) {
-  .gridView .products-row {
+  .gridView .bets-row {
     width: calc(50% - 16px);
   }
 }
 @media screen and (max-width: 520px) {
-  .gridView .products-row {
+  .gridView .bets-row {
     width: 100%;
     margin: 8px 0;
   }
-  .gridView .products-row:hover {
+  .gridView .bets-row:hover {
     transform: none;
   }
 }
-.gridView .products-row .cell-more-button {
+.gridView .bets-row .cell-more-button {
   border: none;
   padding: 0;
   border-radius: 4px;
@@ -614,4 +614,39 @@ body {
 }
 .dropdownsection{
   margin: 10px;
+}
+.tag-input{
+  background-color: #fff;
+  padding: 1.5em;
+  border-radius: 5px;
+  min-width: 20em;
+}
+input-wrap input:focus{
+  outline: none;
+}
+.tag-input small{
+  color: #888;
+}
+.input-wrap span{
+  margin: 0 0.5em 0 0.2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #888;
+}
+.tag{
+  background: #f1f1f1;
+  border-radius: 5px;
+  padding: 0.2em 0.5em;
+  margin: 0.2em;
+}
+.tag span{
+  font-size: 0.8em;
+  cursor: pointer;
+}
+.tags b{
+  padding-bottom: 1em;
+}
+.tags{
+  margin-bottom: 1.5em;
 }
