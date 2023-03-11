@@ -19,7 +19,8 @@ document.querySelector(".list").addEventListener("click", function () {
 });
 
 var modeSwitch = document.querySelector('.mode-switch');
-modeSwitch.addEventListener('click', function () {                      document.documentElement.classList.toggle('light');
+modeSwitch.addEventListener('click', function () {                      
+  document.documentElement.classList.toggle('dark');
  modeSwitch.classList.toggle('active');
 });
 // the tags part
@@ -31,10 +32,12 @@ const max = document.querySelector(".max")
 
 function outputTag(){
   const tag = `
-    <span class="tag">
+  <div class="tagWrapper">
+    <div class="tag">
     <b>Hello</b>
-    <span class="material-icons-outlined remove-btn"> remove-btn </span>
-    </span>
+    <span class="remove-btn"> x </span>
+    </div>
+    </div>
   `;
   output.innerHTML+= tag;
   input.value = "";
