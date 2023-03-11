@@ -6,9 +6,7 @@ document.querySelector(".grid").addEventListener("click", function () {
   document.querySelector(".list").classList.remove("active");
   document.querySelector(".grid").classList.add("active");
   document.querySelector(".bets-area-wrapper").classList.add("gridView");
-  document
-    .querySelector(".bets-area-wrapper")
-    .classList.remove("tableView");
+  document.querySelector(".bets-area-wrapper").classList.remove("tableView");
 });
 
 document.querySelector(".list").addEventListener("click", function () {
@@ -18,19 +16,19 @@ document.querySelector(".list").addEventListener("click", function () {
   document.querySelector(".bets-area-wrapper").classList.add("tableView");
 });
 
-var modeSwitch = document.querySelector('.mode-switch');
-modeSwitch.addEventListener('click', function () {                      
-  document.documentElement.classList.toggle('dark');
- modeSwitch.classList.toggle('active');
+var modeSwitch = document.querySelector(".mode-switch");
+modeSwitch.addEventListener("click", function () {
+  document.documentElement.classList.toggle("dark");
+  modeSwitch.classList.toggle("active");
 });
 // the tags part
 
-const input = document.querySelector("#tag-input")
-const form = document.querySelector("#tagForm")
-const output = document.querySelector(".tags")
-const max = document.querySelector(".max")
+const input = document.querySelector("#tag-input");
+const form = document.querySelector("#tagForm");
+const output = document.querySelector(".tags");
+const max = document.querySelector(".max");
 
-function outputTag(){
+function outputTag() {
   const tag = `
   <div class="tagWrapper">
     <div class="tag">
@@ -39,29 +37,25 @@ function outputTag(){
     </div>
     </div>
   `;
-  output.innerHTML+= tag;
+  output.innerHTML += tag;
   input.value = "";
 }
-tagForm.addEventListener("submit", e=>{
-  if(input.value === ""){
+tagForm.addEventListener("submit", (e) => {
+  if (input.value === "") {
     e.preventDefault();
+  } else {
+    outputTag();
   }
-  
-  else{
-    outputTag()
-  }
-  e.preventDefault()
-}
-)
-input.addEventListener('input', e=>{
-  const rmwhitespace = input.value.replace(/\s/g, '');
-  input.value = rmwhitespace.replace(/\s[^a-zA-Z0-9]/g, "")
-
+  e.preventDefault();
 });
-window.addEventListener('click', e=>{
-  if(e.target.classList.contains('remove-btn')){
-    e.target.parentElement.remove()
+input.addEventListener("input", (e) => {
+  const rmwhitespace = input.value.replace(/\s/g, "");
+  input.value = rmwhitespace.replace(/\s[^a-zA-Z0-9]/g, "");
+});
+window.addEventListener("click", (e) => {
+  if (e.target.classList.contains("remove-btn")) {
+    e.target.parentElement.remove();
     input.disabled = false;
     input.placeholder = "Search an agents ...";
   }
-})
+});
