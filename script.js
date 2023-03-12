@@ -56,6 +56,5 @@ window.addEventListener("click", (e) => {
   if (e.target.classList.contains("remove-btn")) {
     e.target.parentElement.remove();
     input.disabled = false;
-    input.placeholder = "Search an agents ...";
   }
 });

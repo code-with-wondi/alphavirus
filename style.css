@@ -593,7 +593,8 @@ body {
   background-color: #fff;
   padding: 1.5em;
   border-radius: 5px;
-  min-width: 20em;
+  min-height: 100px;
+  overflow: auto;
 }
 input-wrap input:focus {
   outline: none;
@@ -628,8 +629,17 @@ input-wrap input:focus {
 .tags b {
   padding-bottom: 1em;
 }
+.tagWrapper{
+  display: flex;
+  flex-direction: row;
+}
 .tags {
   margin-bottom: 1.5em;
+  display: flex;
+  flex-wrap: wrap;
+
+  overflow: auto;
+
 }
 .mainsection {
   margin: 30px 300px;
